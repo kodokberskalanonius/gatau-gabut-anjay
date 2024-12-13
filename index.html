@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apapun tentang gw (fahri)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #333333;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e6f7ff;
+            border: 1px solid #b3d8ff;
+            border-radius: 5px;
+            color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KATA KATA HARI INI</h1>
+        <textarea id="userInput" placeholder="Tulis perasaanmu di sini..."></textarea>
+        <button onclick="displayMessage()">QUOTE</button>
+        <div id="output" class="output" style="display: none;"></div>
+    </div>
+
+    <script>
+        function displayMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const output = document.getElementById('output');
+            if (userInput.trim() === "") {
+                output.style.display = 'none';
+                alert('Tolong tulis sesuatu sebelum mengungkapkan!');
+            } else {
+                output.style.display = 'block';
+                output.textContent = `Perasaanmu: ${userInput}`;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
